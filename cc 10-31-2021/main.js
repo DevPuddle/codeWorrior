@@ -14,3 +14,20 @@
 function check(a, x) {
     return a.includes(x)
   }
+
+//correct answer
+
+// This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+
+//This function accepts a number 
+//this func will return a number multiplied
+//num times another num if even else another if odd
+//if 5 multiply by 9 if even by 8 return the result
+
+function simpleMultiplication(number) {
+    if(number % 2 === 0){
+        return number * 8
+    } else {
+        return number * 9
+    }
+}
