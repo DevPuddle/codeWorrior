@@ -48,20 +48,60 @@
 // if num to is greter devide it by other vice vera
 
 
-function remainder(n, m){
-    if (n > m ){
-        return n/m
+// function remainder(n, m){
+//     if (n > m ){
+//         return n/m
+//     } else {
+//         return m/n
+//     }
+//   }
+
+//   //correct problem forgot the modulus sybol
+//   function remainder(a, b){
+
+//     if(b>a)
+//       return b%a;
+//     else
+//       return a%b;
+//   }
+
+//   remainder(900,1200)
+
+//ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+
+// If the function is passed a valid PIN string, return true, else return false.
+
+// this function will receive number 
+// this function will return a boolean value
+// if four dor six digits -> true else false
+// IF(value.length === 4 or 6) return true else false
+
+//temped answer for coding problem
+function validatePIN (pin) {
+    if (pin.length === 4 || 6) {
+        console.log(true) 
+        if(pin.length !== 6 || 4) {
+            return false
+        }
     } else {
-        return m/n
+        console.log(false) 
     }
+}
+
+validatePIN(12346)
+  
+//   Examples (Input --> Output)
+//   "1234"   -->  true
+//   "12345"  -->  false
+//   "a234"   -->  false
+
+//correct 
+function validatePIN (pin) {
+    if (pin.length === 4 || pin.length ===6) {
+      return pin.split('').every((num) => !isNaN(parseInt(num)));
+    }
+    return false;
   }
 
-  function remainder(a, b){
 
-    if(b>a)
-      return b%a;
-    else
-      return a%b;
-  }
 
-  remainder(900,1200)
