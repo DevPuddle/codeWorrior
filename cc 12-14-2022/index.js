@@ -22,8 +22,24 @@ function getCount(str) {
     }
     console.log(newStr)
     console.log(count)
-    return count;
-    return 0;
+
 }
 
 getCount("apple")
+
+//correct answer to the coding challenge
+
+function getCount(str) {
+    let count = 0;
+    let vowels = ["a", "e", "i", "o", "u"]
+    for(let i=0; i<str.length; i++){
+      for(let j=0; j<vowels.length; j++){
+        if(vowels[j] === str[i]) {
+          count++
+        }
+      }
+    }
+      
+    return count;
+  }
+  
