@@ -11,15 +11,23 @@
 //"cable" --> "cbl"
 //function -- "cable" split method then map over the new array then join them followed by the return;
 
-function shortcut (string) {
-    let newStr = string.split('').filter(function(elem) {
 
-     if (elem === "a" || "e" || "i" ||"o"||"u"){ 
-        elem.splice(0,1)
+function shortcut(string) {
+    
+    let str = string.split('')
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] === "a" ||
+            string[i] === "e" ||
+            string[i] === "i" ||
+            string[i] === "o" ||
+            string[i] === "u") {
+            str += ""
+        } else {
+            str += string[i]
+        }
+        console.log(str)
 
-     }
-    })
-    console.log(newStr)
+    }
 
 }
 shortcut("orange")
