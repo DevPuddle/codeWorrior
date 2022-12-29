@@ -27,18 +27,21 @@
 function hotpo(n) {
     let counter = 0;
 
-    while (n) {
-    if (n % 2 === 0 && n !== 1) {
-        n / 2
+    while (n !== 1) {
         counter++
+        if (n % 2 === 0 && n !== 1) {
+            n / 2
+            
 
-    } else if (n % 2 !== 0 && n !== 1) {
-        3 * n + 1
-        counter++
+        } else if (n % 2 !== 0 && n !== 1) {
+            3 * n + 1
+        
+        }
+        break;
 
     }
-}
-    return counter;
+    
+    console.log(counter);
 }
 
 hotpo(5)
