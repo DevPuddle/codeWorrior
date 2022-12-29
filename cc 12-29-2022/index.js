@@ -16,6 +16,17 @@
 //[orange, apple, pear] --> "found the needle at position" + indexOf said value
 //function findNeedle(){loop with array method, store index in a variable then return string + variable}
 
-function findNeedle(haystack) {
 
+
+function findNeedle(haystack) {
+    let str = "found the needle at position ";
+    let ans;
+    for(let i = 0; i < haystack.length; i++){
+        if (haystack[i] === "needle"){
+             ans = str + haystack.indexOf("needle");
+        }
+    }
+    return ans
 }
+
+findNeedle(arr)
